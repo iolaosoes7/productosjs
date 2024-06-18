@@ -1,6 +1,7 @@
 console.log("app.js funcionando");
 
-document.addEventListener('DOMContentLoaded', () => {
+//document.addEventListener('DOMContentLoaded', () => {
+window.onload = () => {
     const categoriasContainer = document.getElementById('categoriasRow');
     const productosContainer = document.getElementById('productosRow');
     const productsDesc = document.getElementById('productsDesc');
@@ -90,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <p class="card-text"><strong>Precio:</strong> $${product.price}</p>
                     <p class="card-text"><strong>Impuesto:</strong> $${product.rating.rate}</p>
                     <div class="d-grid gap-2">    
-                        <button class="btn btn-success btn-lg" onclick="showProductsDesc(${product.id})">Descripción</button>
+                        <button class="btn btn-info btn-lg" onclick="showProductsDesc(${product.id})">Descripción</button>
                     </div>
                 </div>
             </div>
@@ -138,4 +139,4 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     // Llamar a la función para obtener y mostrar las categorías y productos
     obtenerCategorias();
-});
+};
