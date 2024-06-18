@@ -79,10 +79,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
         card.innerHTML = `
             <div class="card mb-4 shadow-sm product-card">
+                <div class="card-header text-end">
+                    Stock:</strong> ${product.rating.count}
+                </div>
                 <img src="${product.image}" class="card-img-top product-image" alt="${product.title}">
                 <div class="card-body">
                     <h5 class="card-title">${product.title}</h5>
+                    <hr>
                     <p class="card-text"><strong>Precio:</strong> $${product.price}</p>
+                    <p class="card-text"><strong>Impuesto:</strong> $${product.rating.rate}</p>
                     <div class="d-grid gap-2">    
                         <button class="btn btn-success btn-lg" onclick="showProductsDesc(${product.id})">Descripción</button>
                     </div>
