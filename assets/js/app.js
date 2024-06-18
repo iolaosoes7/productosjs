@@ -67,6 +67,10 @@ window.onload = () => {
                 //console.log(producto);
                 const productoCard = createProductCard(producto);
                 productosContainer.appendChild(productoCard);
+
+                // mostraremos la sección productosSection
+                const productosSection = document.getElementById('productosSection');
+                productosSection.classList.remove('d-none'); 
             }); 
 
         } catch (error) {

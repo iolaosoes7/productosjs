@@ -8,6 +8,29 @@
     <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body>
+
+    <!-- Menú de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">StarClick Shop</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#nosotrosSection">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#categoriasSection">Categorías</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#productosSection">Ver Productos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     
     <header class="header bg-primary text-white text-center py-5 mb-4">
         <div class="box">
@@ -15,7 +38,7 @@
         </div>
     </header>
 
-    <section class="description-section py-5">
+    <section id="nosotrosSection" class="description-section py-3">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-3 mb-4 mb-md-0">
@@ -30,16 +53,19 @@
         </div>
     </section>
     
+    <section id="categoriasSection" class="categories-section py-3">
+        <div class="container">
+            <h1 class="my-4">Categorías</h1>
+            <div id="categoriasRow" class="row"></div>
+        </div>
+    </section>
 
-    <div class="container">
-        <h1 class="my-4">Categorías</h1>
-        <div id="categoriasRow" class="row"></div>
-    </div>
-
-    <div class="container">
-        <h1 class="my-4">Productos</h1>
-        <div id="productosRow" class="row"></div>
-    </div>
+    <section id="productosSection" class="categories-section py-5 d-none">
+        <div class="container">
+            <h1 class="my-4">Productos</h1>
+            <div id="productosRow" class="row"></div>
+        </div>
+    </section>  
 
 
 
