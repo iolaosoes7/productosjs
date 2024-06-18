@@ -1,0 +1,17 @@
+body {
+    padding-top: 20px;
+    background-color: #f8f9fa;
+}
+
+.card {
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.modal-body {
+    overflow-y: auto;
+    max-height: 60vh;
+}
