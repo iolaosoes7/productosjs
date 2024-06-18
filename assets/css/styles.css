@@ -7,11 +7,30 @@ body {
     transition: transform 0.2s;
 }
 
+.product-card {
+    height: 100%;
+}
+
 .card:hover {
     transform: scale(1.05);
 }
 
-.modal-body {
-    overflow-y: auto;
-    max-height: 60vh;
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    display: block;
+}
+
+.product-card {
+    height: 100%;
+}
+
+.product-card .card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-title {
+    flex-grow: 1;
 }
