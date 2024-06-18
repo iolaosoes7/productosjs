@@ -10,8 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Función para obtener categorías y productos
     const obtenerCategorias = async () => {
         try {
-            const response = await fetch('https://fakestoreapi.com/products/categories');
-            const data = await response.json();
+            const data = await fetch('https://fakestoreapi.com/products/categories')
+                            .then(res=>res.json());
+                    
             //console.log(data);
             // Iterar sobre las categorías y crear tarjetas
             data.forEach(categoria => {
@@ -54,8 +55,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const url = `https://fakestoreapi.com/products/category/${categoria}`;
             //console.log(url);
             
-            const response = await fetch(url);             
-            const productos = await response.json();
+            const productos = await fetch(url)
+                                .then(res=>res.json());             
 
             // Limpiar el contenedor de productos
             productosContainer.innerHTML = '';
@@ -103,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         try {
             const data = await fetch(`https://fakestoreapi.com/products/${producId}`)
-            .then(res=>res.json());
+                            .then(res=>res.json());
             
             const modalCard = createProductDescCard(data);
             productsDesc.innerHTML = modalCard;
